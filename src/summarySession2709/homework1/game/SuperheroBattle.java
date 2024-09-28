@@ -1,9 +1,9 @@
-package summerySession2709.game;
+package summarySession2709.homework1.game;
 
-import summerySession2709.game.accessories.Protection;
-import summerySession2709.game.accessories.Weapon;
-import summerySession2709.game.characters.EvilCreature;
-import summerySession2709.game.characters.Superhero;
+import summarySession2709.homework1.game.accessories.Protection;
+import summarySession2709.homework1.game.accessories.Weapon;
+import summarySession2709.homework1.game.characters.EvilCreature;
+import summarySession2709.homework1.game.characters.Superhero;
 
 public class SuperheroBattle {
     public void run() {

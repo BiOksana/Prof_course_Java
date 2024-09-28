@@ -1,7 +1,7 @@
-package summerySession2709.game.characters;
+package summarySession2709.homework1.game.characters;
 
-import summerySession2709.game.accessories.Protection;
-import summerySession2709.game.accessories.Weapon;
+import summarySession2709.homework1.game.accessories.Protection;
+import summarySession2709.homework1.game.accessories.Weapon;
 
 public class Superhero extends Character {
     private int force;

@@ -1,4 +1,4 @@
-package summerySession2709.game;
+package summarySession2709.homework1.game;
 
 public class GameApp {
 //    Superhero battle

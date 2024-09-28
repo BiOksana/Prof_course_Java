@@ -1,4 +1,4 @@
-package summerySession2709.game.accessories;
+package summarySession2709.homework1.game.accessories;
 
 public class Weapon {
     private String name;

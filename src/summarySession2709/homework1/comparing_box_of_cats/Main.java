@@ -1,4 +1,4 @@
-package summerySession2709.homework1;
+package summarySession2709.homework1.comparing_box_of_cats;
 
 public class Main {
     public static void main(String[] args) {
