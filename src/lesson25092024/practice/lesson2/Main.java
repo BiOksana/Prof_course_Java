@@ -21,7 +21,8 @@ public class Main {
         System.out.println();
 
         UniPegasus uniPegasus = new UniPegasus("Tom", "Brown", 15, 4, 2);
-//        uniPegasus.fightAndFlight();
+        uniPegasus.run();
+        uniPegasus.transport();
         uniPegasus.fly();
         uniPegasus.fight();
 

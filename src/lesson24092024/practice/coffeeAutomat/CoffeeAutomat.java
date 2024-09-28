@@ -1,4 +1,4 @@
-package lesson25092024.practice.coffeeAutomat;
+package lesson24092024.practice.coffeeAutomat;
 
 
 public class CoffeeAutomat {
