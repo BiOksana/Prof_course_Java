@@ -1,24 +1,14 @@
-package week1.lesson24092024.inheritance;
+package week1.lesson24092024.inheritance.models;
 
-public abstract class Animal {
-
-    private String name;
+public abstract class Animal extends Creature {
 
     private int age;
 
     private boolean isHungry = true;
 
     public Animal(String name, int age) {
-        this.name = name;
+        super(name);
         this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getAge() {
@@ -37,16 +27,11 @@ public abstract class Animal {
         isHungry = hungry;
     }
 
-    //    public void introduce() {
-//        System.out.println("Hello!" + " I'm animal" + " My name is " + name);
-//    }
-
-    public abstract void introduce();
 
     @Override
     public String toString() {
         return "Animal{" +
-                "name='" + name + '\'' +
+                "name='" + getName() + '\'' +
                 ", age=" + age +
                 ", isHungry=" + isHungry +
                 '}';
