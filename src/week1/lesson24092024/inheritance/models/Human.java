@@ -1,6 +1,8 @@
 package week1.lesson24092024.inheritance.models;
 
-public class Human extends Creature {
+import week1.lesson24092024.inheritance.interfaces.Walkable;
+
+public class Human extends Creature implements Walkable {
 
     public Human(String name) {
         super(name);
