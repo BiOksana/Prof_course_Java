@@ -1,6 +1,8 @@
 package week1.lesson24092024.inheritance.models;
 
-public class Cat extends Animal {
+import week1.lesson24092024.inheritance.interfaces.CatchingSkills;
+
+public class Cat extends Animal implements CatchingSkills {
 
     public Cat(String name, int age) {
         super(name, age);
@@ -20,5 +22,11 @@ public class Cat extends Animal {
     public void play(Creature another) {
         meow();
         System.out.println(" I'm running away from you!");
+    }
+
+    @Override
+    public void catchMouse() {
+        System.out.println("I'm " + getClass().getSimpleName()
+                + " named " + getName() + ". I just caught a mouse.");
     }
 }

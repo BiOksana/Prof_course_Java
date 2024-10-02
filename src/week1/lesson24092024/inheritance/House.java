@@ -54,6 +54,7 @@ public class House {
         human.feedAnimal(cat);
         cat.play(dog);
         dog.play(cat);
+        cat.catchMouse();
         Robot robot = new Robot("Merlin", 4);
         robot.walk(dog);
         human.feedAnimal(dog);
