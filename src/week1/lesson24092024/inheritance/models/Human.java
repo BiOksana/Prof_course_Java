@@ -43,7 +43,7 @@ public class Human extends Creature implements Walkable {
     public void play(Creature another) {
         if (another != null && another instanceof Animal) {
             System.out.println("I'm " + getClass().getSimpleName() + " named "
-                    + getName() + ". I'm playing with " + " my "
+                    + getName() + ". I'm playing with my "
                     + another.getClass().getSimpleName() + " named "
                     + another.getName());
         } else {

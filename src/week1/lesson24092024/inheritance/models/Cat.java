@@ -9,24 +9,25 @@ public class Cat extends Animal implements CatchingSkills {
     }
 
     public void meow() {
-        System.out.print("Meow!");
+        System.out.print(" Meow!");
     }
 
     @Override
     public void introduce() {
-        System.out.println("Hello!" + " I'm " + this.getClass().getSimpleName()
-                + ". My name is " + getName());
+        System.out.print("I'm " + this.getClass().getSimpleName()
+                + " named " + getName() + ":");
     }
 
     @Override
     public void play(Creature another) {
+        introduce();
         meow();
         System.out.println(" I'm running away from you!");
     }
 
     @Override
     public void catchMouse() {
-        System.out.println("I'm " + getClass().getSimpleName()
-                + " named " + getName() + ". I just caught a mouse.");
+        introduce();
+        System.out.print(" I just caught a mouse.\n");
     }
 }

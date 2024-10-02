@@ -10,19 +10,19 @@ public class Dog extends Animal {
     }
 
     public void gav() {
-        System.out.print("Gav! Gav!");
+        System.out.print(" Gav! Gav!");
     }
 
     @Override
     public void introduce() {
-        System.out.println("Hello!" + " I'm " + this.getClass().getSimpleName()
-                + ". My name is " + getName());
+        System.out.print("I'm " + this.getClass().getSimpleName()
+                + " named " + getName() + ":");
     }
 
     @Override
     public void play(Creature another) {
+        introduce();
         gav();
         System.out.println(" I want to play with you!");
-
     }
 }
