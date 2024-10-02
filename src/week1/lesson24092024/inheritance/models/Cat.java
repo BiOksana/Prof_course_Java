@@ -19,6 +19,6 @@ public class Cat extends Animal {
     @Override
     public void play(Creature another) {
         meow();
-        System.out.println(" I want to play with you!");
+        System.out.println(" I'm running away from you!");
     }
 }
