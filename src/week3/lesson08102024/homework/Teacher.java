@@ -8,19 +8,13 @@ public class Teacher {
     }
 
     public void teach(Student student) {
-        if (student.knows(this.subject)) {
+        if (student.knows(subject)) {
             return;
         }
-
-        for (int i = 0; i < student.getSubjects().length; i++) {
-            if (student.getSubjects()[i] == null) {
-                student.getSubjects()[i] = this.subject;
-                System.out.println(student.getName() + " "
-                        + student.getSurname() + " studies the "
-                        + this.subject);
-                break;
-            }
-        }
+        System.out.println(this.getClass().getSimpleName() + " teaches "
+                                                            + student.getSurname()
+                                                            + " " + subject);
+        student.learn(subject);
     }
 
     public void teach(Student[] students) {

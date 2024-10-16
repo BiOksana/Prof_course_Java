@@ -1,5 +1,7 @@
 package week3.lesson08102024.homework;
 
+import java.util.Arrays;
+
 public class School {
    //    Реализовать модель школы:
 //    класс Teacher
@@ -30,50 +32,78 @@ public class School {
        Teacher physicalEducationTeacher = new Teacher(Subject.PHYSICAL_EDUCATION);
 
        Student student1 = new Student("Anton", "Sidorov");
-       Student student2 = new Student("Sergey", "Petrov");
-       Student student3 = new Student("Mikhail", "Andreev");
-       Student student4 = new Student("Anrew", "Sergeev");
-       Student student5 = new Student("Olga", "Ivanova");
-       Student student6 = new Student("Irina", "Alexeeva");
-       Student student7 = new Student("Svetlana", "Egorova");
-       Student student8 = new Student("Oleg", "Svetlov");
-       Student student9 = new Student("Nata", "Pavlova");
-       Student student10 = new Student("Elena", "Nikolaeva");
-       Student student11 = new Student("Ihor", "Belov");
-       Student student12 = new Student("Lev", "Shevchenko");
 
-       Student[] studentsOfTheFirstGroup = {student1, student2, student3, student4, student5, student6};
-       Student[] studentsOfTheSecondGroup = {student7, student8, student9, student10, student11, student12};
-       Student[] studentsOfTheEnglishLesson = {student6, student11, student4, student5, student9, student12};
-       Student[] studentsOfTheTheHistory = {student8, student3, student1, student10, student6, student11, student9};
-               mathTeacher.teach(studentsOfTheFirstGroup);
-
-       geographyTeacher.teach(student7);
-       student7.knows(Subject.PHYSICAL_EDUCATION);
-       student7.knows(Subject.GEOGRAPHY);
+       mathTeacher.teach(student1);
+       geographyTeacher.teach(student1);
+       physicsTeacher.teach(student1);
+       System.out.println(student1);
+       System.out.println(student1.getAllStudiedSubjects().length);
+//       Student student2 = new Student("Sergey", "Petrov");
+//       Student student3 = new Student("Mikhail", "Andreev");
+//       Student student4 = new Student("Anrew", "Sergeev");
+//       Student student5 = new Student("Olga", "Ivanova");
+//       Student student6 = new Student("Irina", "Alexeeva");
+//       Student student7 = new Student("Svetlana", "Egorova");
+//       Student student8 = new Student("Oleg", "Svetlov");
+//       Student student9 = new Student("Nata", "Pavlova");
+//       Student student10 = new Student("Elena", "Nikolaeva");
+//       Student student11 = new Student("Ihor", "Belov");
+//       Student student12 = new Student("Lev", "Shevchenko");
+//
+//       Student[] studentsOfTheFirstGroup = {student1, student2, student3, student4, student5, student6};
+//       Student[] studentsOfTheSecondGroup = {student7, student8, student9, student10, student11, student12};
+//       Student[] studentsOfTheEnglishLesson = {student6, student11, student4, student5, student9, student12};
+//       Student[] studentsOfTheTheHistory = {student8, student3, student1, student10, student6, student11, student9};
+//               mathTeacher.teach(studentsOfTheFirstGroup);
+//
+//       geographyTeacher.teach(student7);
+//       student7.knows(Subject.PHYSICAL_EDUCATION);
+//       student7.knows(Subject.GEOGRAPHY);
+//       System.out.println();
+//
+//       geographyTeacher.teach(studentsOfTheSecondGroup);
+//
+//       System.out.println();
+//
+//       englishTeacher.teach(studentsOfTheEnglishLesson);
+//
+//       System.out.println();
+//
+//       historyTeacher.teach(studentsOfTheTheHistory);
+//
+//       System.out.println();
+//
+//       physicsTeacher.teach(studentsOfTheFirstGroup);
+//
+//       System.out.println();
+//
+//       chemistryTeacher.teach(studentsOfTheSecondGroup);
+//
+//       for (Student student : studentsOfTheSecondGroup) {
+//          System.out.println(student);
+//       }
+//
+       Student shallowCopiedStudent = student1.makeCopy();
+       System.out.println(shallowCopiedStudent.equals(student1));
+       System.out.println(shallowCopiedStudent == student1);
+       System.out.println(shallowCopiedStudent.getName().equals(student1.getName()));
+       System.out.println(shallowCopiedStudent.getName() == student1.getName());
+       System.out.println(shallowCopiedStudent.getSubjects().equals(student1.getSubjects()));
+       System.out.println(shallowCopiedStudent.getSubjects() == student1.getSubjects());
        System.out.println();
 
-       geographyTeacher.teach(studentsOfTheSecondGroup);
+       Student deepCopiedStudent = student1.deepCopy();
+       System.out.println(deepCopiedStudent.equals(student1));
+       System.out.println(deepCopiedStudent == student1);
+       System.out.println(deepCopiedStudent.getName().equals(student1.getName()));
+       System.out.println(deepCopiedStudent.getName() == student1.getName());
+       System.out.println(deepCopiedStudent.getSubjects() == student1.getSubjects());
+       System.out.println(deepCopiedStudent.getSubjects().equals(student1.getSubjects()));
 
        System.out.println();
+       System.out.println(Arrays.toString(deepCopiedStudent.getSubjects()));
+       System.out.println(Arrays.toString(student1.getSubjects()));
 
-       englishTeacher.teach(studentsOfTheEnglishLesson);
-
-       System.out.println();
-
-       historyTeacher.teach(studentsOfTheTheHistory);
-
-       System.out.println();
-
-       physicsTeacher.teach(studentsOfTheFirstGroup);
-
-       System.out.println();
-
-       chemistryTeacher.teach(studentsOfTheSecondGroup);
-
-       for (Student student : studentsOfTheSecondGroup) {
-          System.out.println(student);
-       }
     }
 
 }
