@@ -61,6 +61,16 @@ public class Task1 {
                 throw new RuntimeException(e);
             }
 
+            synchronized (Runner.class) {
+                System.out.println(Thread.currentThread().getName() + " is running over the bridge");
+                try {
+                    Thread.sleep((int) (Math.random() * 1001 + 1000));
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                System.out.println(Thread.currentThread().getName() + " left the bridge");
+            }
+
             long finish = System.currentTimeMillis();
             result = finish - start;
             System.out.println(Thread.currentThread().getName() + " finished for time " + result);
