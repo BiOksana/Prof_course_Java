@@ -9,6 +9,8 @@ class Task3Test {
     @Test
     public void checkLoginAndPasswordTest() {
         assertTrue(Task3.checkLoginAndPassword("john", "1234a", "1234a"));
+        assertTrue(Task3.checkLoginAndPassword("johjqazwsxedcvfrtgbn", "1234a", "1234a"));
+        assertTrue(Task3.checkLoginAndPassword("joh", "1234a", "1234a"));
         assertFalse(Task3.checkLoginAndPassword("john", "12345", "123456"));
         assertFalse(Task3.checkLoginAndPassword("john", "12345@", "12345@"));
         assertFalse(Task3.checkLoginAndPassword("john1", "12345", "12345"));
